@@ -1,9 +1,9 @@
-
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
     <title>모델하우스지도</title>
+     <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=vR45q0L00bhFblhU2rFt"></script>
   <style>
     h1 {
       font-size: 45px;
@@ -15,7 +15,7 @@
    #grid {
      border: 1px solid gray;
      display: grid;
-     grid-template-columns: 300px 150px 200px 3fr 1fr;
+     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
    }
    div {
      border: 1px solid gray;
@@ -25,21 +25,16 @@
      background-color: #ececec;
    }
    #red {
-     background-color: #c70039;
+     background-color: #F27C8D;
      color: white;
    }
    #purple {
-     background-color: #7F54B2;
+     background-color: #7B73D1;
      color: white;
    }
    #green {
-     background-color: #54B272;
+     background-color: #8DCCAD;
      color: white;
-      grid-template-columns: 1fr;
-   }
-   #map {
-     display: grid;
-
    }
   </style>
   </head>
@@ -49,7 +44,7 @@
      <div id="red">쌍용더플래티넘광주</div>
      <div>7월3일</div>
      <div>1661-7773</div>
-     <div>경기도 광주시 역동 27-4</div>
+     <div><a href="">경기도 광주시 역동 27-4</a></div>
      <div>73A/84C</div>
    </div>
    <div id="grid">
@@ -80,8 +75,19 @@
      <div>경기도 양평군 양평읍 역전길 19 (2층)</div>
      <div>74/84</div>
    </div>
-    <div id="map">
-   <a href="https://map.kakao.com/?urlX=543077&urlY=1125472&urlLevel=10&map_type=TYPE_MAP&map_hybrid=false" target="_blank"><img width="1008" height="620" src="https://map2.daum.net/map/mapservice?FORMAT=PNG&SCALE=320&MX=543077&MY=1125472&S=0&IW=504&IH=310&LANG=0&COORDSTM=WCONGNAMUL&logo=kakao_logo" style="border:1px solid #ccc; margin-top: 10px"></a>
-    </div>
+   <div id="map" style="width:100%;height:400px;"></div>
+
+   <script>
+   var mapOptions = {
+       center: new naver.maps.LatLng(37.3595704, 127.105399),
+       zoom: 10
+   };
+
+   var map = new naver.maps.Map('map', mapOptions);
+   </script>
   </body>
 </html>
+<!--
+yellow #F5CC7F
+blue #7B9FE0
+-->
